@@ -16,7 +16,17 @@ function sub(x, y) {
 sub(200, 100);
 
 // Funtions without input with return
-function prod() {}
+function prod() {
+    var a = 300;
+    var b = 100;
+    return a * b;
+}
+let result = prod();
+console.log(result);
 
 // Funtions with input with return
-
+function quotient(a, b) {
+    return a/b;
+}
+let result1 = quotient(200, 100);
+console.log(result1);
