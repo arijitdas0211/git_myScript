@@ -31,6 +31,7 @@ This section includes code snippets, examples, and practice problems that demons
 - Object creation  
 - Accessing and modifying properties  
 - Object methods  
-- Iterating over objects  
+- Iterating over objects
+  
 
 Happy Coding! 🚀
