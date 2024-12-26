@@ -3,3 +3,4 @@ function greet() {
 }
 
 greet();
+console.log(typeof greet);
