@@ -16,6 +16,8 @@ for (var i = 0; i < arr.length; i++) {
     }
 }
 
+console.log("\n========================================\n");
+
 var arr2 = [1, 2, 3, 5, 26];
 console.log("Original Array: ", arr2);
 
@@ -26,6 +28,8 @@ console.log("After push 500: ", arr2);
 // Appends element at the beginning of the array.
 arr2.unshift(7);
 console.log("After unshift 7: ", arr2);
+
+console.log("\n========================================\n");
 
 // Remove element from the end of the array.
 arr.pop();
@@ -44,11 +48,15 @@ arr3 = [100, 200, 300, 400, 500];
 // slice(startIndex, lastIndex = index-1).
 console.log(arr3.slice(1, 3));  // returns element of index 1 to index (3-1) = 2.
 
+console.log("\n========================================\n");
+
 // indexOf(): Returns index of specific element.
 console.log(arr3.indexOf(300));
 
 // includes(): Returns element is present in the array or not.
 console.log(arr3.includes(400)); // Returns true.
+
+console.log("\n========================================\n");
 
 arr4 = ['z', 'a', 'x', 'k'];
 // sort(): Sorts the original String Array (Only Strings).
@@ -75,3 +83,6 @@ let users = ['akash', 'ankit', 'punith', 'ayush'];
 let [user1, user2] = users;
 console.log(user1); // Returns akash.
 console.log(user2); // Returns ankit.
+
+console.log("\n========================================\n");
+
