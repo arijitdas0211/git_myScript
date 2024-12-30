@@ -18,5 +18,12 @@ console.log("Squared array: ", sqArr);
 // reduce():
 let arr = [1,2,3,4];
 
-var sum = arr.reduce((acc, elem)=> acc + elem , 0);
-console.log(sum);
+// var sum = arr.reduce(function(acc, elem) {
+//     return elem + acc;
+// }, 0);
+
+var sum = arr.reduce((acc, elem)=> acc + elem , 0);  // 0 + elem.
+console.log("Sum is: ", sum);
+
+var product = arr.reduce((acc, elem) => acc * elem, 1);  // 1 * elem.
+console.log("Product is: ", product);
