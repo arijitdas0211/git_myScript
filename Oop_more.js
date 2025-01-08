@@ -3,6 +3,10 @@ class Employee {
         this.name = Emp_name;
         this.salary = Emp_sal;
     }
+
+    work() {
+        console.log(this.name, "is working.");
+    }
 }
 
 e1 = new Employee('Akash', 35000);
@@ -10,4 +14,4 @@ console.log("Employee name:", e1.name, ", salary:",e1.salary);
 
 e2 = new Employee('Ankit', 45000);
 console.log("Employee name:", e2.name, ", salary:", e2.salary);
-
+e2.work();
