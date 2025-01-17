@@ -12,8 +12,20 @@ try {
 } finally {
     // Optional block to execute after try or catch.
 }
+// ************************************************************
+// ************************************************************
 
 function add() {
     console.log("This function will perform add operation");
 }
-subtract(); // This will throw an error.
+add();
+function task() {
+    console.log(z);
+}
+try {
+    task();
+} catch {
+    console.log("Some error occured in task() function and handled.");
+}
+console.log("Task 3");
+console.log("Task 4");
