@@ -12,36 +12,43 @@
             color: bisque;
             transition: all 0.4s ease-in-out;
         }
-        .fa-star:hover {
-            color: rgb(255, 0, 0);
-        }
     </style>
 </head>
 <body>
     
     <div class="container border text-center p-3 w-50">
-        <div class="row">
-            <i class="fa-solid fa-star fa-xl" id="one"></i>
-            <i class="fa-solid fa-star fa-xl" id="two"></i>
-            <i class="fa-solid fa-star fa-xl" id="three"></i>
-            <i class="fa-solid fa-star fa-xl" id="four"></i>
-            <i class="fa-solid fa-star fa-xl" id="five"></i>
+        <div class="row align-items-start">
+            <i class="fa-solid fa-star fa-xl col" id="one"></i>
+            <i class="fa-solid fa-star fa-xl col" id="two"></i>
+            <i class="fa-solid fa-star fa-xl col" id="three"></i>
+            <i class="fa-solid fa-star fa-xl col" id="four"></i>
+            <i class="fa-solid fa-star fa-xl col" id="five"></i>
         </div>
-        <div class="row">
-            
+        <div class="row mt-5">
+            <h5>
+                Count: <span id="num">0</span>
+            </h5>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
     <script>
         const one = document.getElementById('one');
         const two = document.getElementById('two');
         const three = document.getElementById('three');
         const four = document.getElementById('four');
         const five = document.getElementById('five');
+        const num = document.getElementById("num");
 
-
+        let count = 0;
+        document.querySelector('#one').addEventListener('click', () => {
+            count = 1;
+            one.style.backgroundColor = 'red';
+            num.textContent = count;
+            console.log(count);
+            alert("Mouse over the element.");
+        });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
 </body>
 </html>
