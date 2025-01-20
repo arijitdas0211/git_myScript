@@ -12,17 +12,20 @@
             color: bisque;
             transition: all 0.4s ease-in-out;
         }
+        .fa-star:hover {
+            color: crimson;
+        }
     </style>
 </head>
 <body>
     
-    <div class="container border text-center p-3 w-50">
+    <div class="container border text-center shadow-sm p-3 w-50" id="star_container">
         <div class="row align-items-start">
-            <i class="fa-solid fa-star fa-xl col" id="one"></i>
-            <i class="fa-solid fa-star fa-xl col" id="two"></i>
-            <i class="fa-solid fa-star fa-xl col" id="three"></i>
-            <i class="fa-solid fa-star fa-xl col" id="four"></i>
-            <i class="fa-solid fa-star fa-xl col" id="five"></i>
+            <div class="col" id="one"><i class="fa-solid fa-star fa-xl"></i></div>
+            <div class="col" id="two"><i class="fa-solid fa-star fa-xl"></i></div>
+            <div class="col" id="three"><i class="fa-solid fa-star fa-xl"></i></div>
+            <div class="col" id="four"><i class="fa-solid fa-star fa-xl"></i></div>
+            <div class="col" id="five"><i class="fa-solid fa-star fa-xl"></i></div>
         </div>
         <div class="row mt-5">
             <h5>
@@ -32,21 +35,31 @@
     </div>
 
     <script>
+        
         const one = document.getElementById('one');
         const two = document.getElementById('two');
         const three = document.getElementById('three');
         const four = document.getElementById('four');
         const five = document.getElementById('five');
         const num = document.getElementById("num");
-
-        let count = 0;
-        document.querySelector('#one').addEventListener('click', () => {
-            count = 1;
-            one.style.backgroundColor = 'red';
+        const star = document.getElementsByClassName("fa-star");
+        
+        const mainDiv = document.getElementById("star_container");
+        mainDiv.addEventListener('mouseout', () => {
+            count = 0;
             num.textContent = count;
-            console.log(count);
-            alert("Mouse over the element.");
         });
+        
+        const arr = [one, two, three, four, five];
+        
+        let count = 0;
+        for (let i=0; i<arr.length; i++) {
+            arr[i].addEventListener('mouseover', () => {
+                count = i+1;
+                num.textContent = count;
+            });
+        }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
