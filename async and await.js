@@ -15,3 +15,10 @@ process();
 
 console.log('Some other tasks');
 
+/**
+ * All the instructions which are present inside the function
+after promise they should wait for promise to resolve or reject.
+
+ * But the Intructions which are outside the functions should
+not wait for promise to resolve or reject.
+ */
