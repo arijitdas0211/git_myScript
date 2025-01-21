@@ -1,14 +1,17 @@
 let p1 = new Promise(function(resolve, reject) {
     setTimeout(()=> {
+        console.log("Task 2");
         resolve();
     }, 5000)
 })
 
-function process() {
+async function process() {
     console.log('Task 1');
-    p1.then(()=> console.log('Task 2'));        // This is under pending state for 5 secs.
-    console.log('Task 3 depends on Task 2 (executed first)');
+    // p1.then(()=> console.log('Task 2'));        // This is under pending state for 5 secs.
+    await p1;       // Pending state.
+    console.log('Task 3 depends on Task 2 (executed first)');   // After above pending state is resolved, then this line will execute.
 }
 process();
 
 console.log('Some other tasks');
+
