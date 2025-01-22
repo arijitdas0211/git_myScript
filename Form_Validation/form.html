@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <form onsubmit="validate()">
+    <form onsubmit="return validate(event)">
         <label for="name">First Name:</label> 
         <input type="text" id="name" /> 
         <span id="msg">*</span>
@@ -22,8 +22,18 @@
 
     <script>
         function validate() {
+            event.preventDefault();
             let name = document.getElementById("name").value;
-            alert(name);
+            // let msg = document.getElementById("msg");
+            target = document.getElementById("msg");
+            if (name === '') {
+                target.textContent = "Name cannot be empty !!";
+            } else if (name.length < 2) {
+                target.textContent = "Length of Name must be greater than 2.";
+            } else {
+                target.textContent = "*";
+                alert(name);
+            }
         }
     </script>
 </body>
