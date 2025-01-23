@@ -4,18 +4,15 @@ const closebtn = document.getElementById("closebtn");
 const sidebar = document.getElementById("sidebar");
 
 button.addEventListener('click', () => {
-
     if (barbtn.style.display === "block") {
-        console.log("Barbutton Clicked");
+        sidebar.style.display = "none";
         barbtn.style.display = "none";
         closebtn.style.display = "block";
-        sidebar.style.display = "none";
-    }
-
-    else {
-        console.log("Closebtn Clicked");
+        console.log("Barbutton Clicked");
+    } else {
+        sidebar.style.display = "block";
         barbtn.style.display = "block";
         closebtn.style.display = "none";
-        sidebar.style.display = "block";
+        console.log("Closebtn Clicked");
     }
 })
