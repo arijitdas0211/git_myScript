@@ -4,6 +4,7 @@ const closebtn = document.getElementById("closebtn");
 const sidebar = document.getElementById("sidebar");
 
 button.addEventListener('click', () => {
+    
     if (barbtn.style.display === "block") {
         sidebar.style.display = "none";
         barbtn.style.display = "none";
